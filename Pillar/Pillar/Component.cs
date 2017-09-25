@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Pillar {
-	public class Component {
+	public class Component : IUpdatable {
+		public void Step() {
+			
+		}
 	}
 }
