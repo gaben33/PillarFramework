@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Pillar {
-	public class Entity : IUpdatable {
-		public void Step() {
-			
-		}
+	public partial class Entity {
+		
 	}
 }

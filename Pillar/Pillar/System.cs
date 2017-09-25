@@ -8,6 +8,7 @@ namespace Pillar {
 	public class System : IUpdatable {
 		public string name;
 		public Entity root;
+		public bool paused = false;
 
 		public System(string name) {
 			this.name = name;
@@ -15,7 +16,7 @@ namespace Pillar {
 		}
 
 		public void Step() {
-			
+			root.Step();
 		}
 	}
 }
