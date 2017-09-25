@@ -8,7 +8,8 @@ namespace Pillar {
 
 	public partial class Entity {
 
-        private bool active = true;
+        public bool active = true;
+        public int id;
         private Entity parent;
         private System system;
         private List<Entity> children = new List<Entity>();
@@ -16,25 +17,30 @@ namespace Pillar {
 
 		public Entity(Entity parent) {
             this.parent = parent;
-            System = parent.System;
+        }
+
+        public List<Entity> GetChildren() {
+            return children;
         }
         
         public void AddChild(Entity child) {
             children.Add(child);
         }
 
-        public void AddComponent(Component component){
+        public void HasChild(Entity otherChild) {
+            foreach(Entity child in children){
+                if(otherChild.Equals(child)) return true;
+            }
+            return false;
+        }
+
+        public void AddComponent(Component component) {
             components.Add(component);
         }
 
-        public bool Active {
-            get { return active; }
-            set { active = value;}
-        }
-        
-        public System System {
-            get { return system; }
-            set { System = value; }
+        public bool equals(Entity other){
+            if(other.id == id) return true;
+            return false;
         }
 
 
