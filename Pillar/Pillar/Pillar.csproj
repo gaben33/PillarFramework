@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponentCL.cs" />
-    <Compile Include="ComponentGN.cs" />
-    <Compile Include="EntityCL.cs" />
-    <Compile Include="EntityGN.cs" />
+    <Compile Include="CL\ComponentCL.cs" />
+    <Compile Include="GN\ComponentGN.cs" />
+    <Compile Include="CL\EntityCL.cs" />
+    <Compile Include="GN\EntityGN.cs" />
     <Compile Include="IUpdatable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

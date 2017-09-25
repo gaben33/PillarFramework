@@ -8,7 +8,7 @@ namespace Pillar {
 	public partial class Component : IUpdatable {
 		public bool enabled = true;
 		public void Step() {
-			
+
 		}
 	}
 }
