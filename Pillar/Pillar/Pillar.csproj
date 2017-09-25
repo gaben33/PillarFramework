@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviour.cs" />
     <Compile Include="CL\ComponentCL.cs" />
     <Compile Include="GN\ComponentGN.cs" />
     <Compile Include="CL\EntityCL.cs" />
