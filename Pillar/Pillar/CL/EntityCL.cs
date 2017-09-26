@@ -10,8 +10,8 @@ namespace Pillar {
 
         public bool active = true;
         public int id;
-        private Entity parent;
-        private System system;
+        public Entity parent;
+        public System system;
         private List<Entity> children = new List<Entity>();
         private List<Component> components = new List<Component>();
 
@@ -27,7 +27,7 @@ namespace Pillar {
             children.Add(child);
         }
 
-        public void HasChild(Entity otherChild) {
+        public bool HasChild(Entity otherChild) {
             foreach(Entity child in children){
                 if(otherChild.Equals(child)) return true;
             }
