@@ -8,12 +8,13 @@ namespace Pillar {
 
 	public partial class Component {
 
-        private System system;
-        private Entity parent;
+        protected System system { get; private set; }
+        protected Entity entity { get; private set; }
 
-		public Component(Entity parent){ 
-            system = parent.system;
-            this.parent = parent;
+		public Component(Entity parent) {
+			if (parent == null) system = System.current;
+			else system = parent.system;
+            this.entity = parent;
         }
 	}
 }

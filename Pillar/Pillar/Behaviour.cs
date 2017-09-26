@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Pillar {
-	public class Behaviour : Component {
-		public Behaviour() {
+	public abstract class Behaviour : Component {
+		public Behaviour(Entity entity) : base(entity) {
 			Start();
-			internalUpdate = () => { if (enabled) Update(); };
+			internalUpdate = () => { if (!system.paused) Update(); };
 			internalUpdate += PersistantUpdate;
 		}
 		#region to be potentially overridden
